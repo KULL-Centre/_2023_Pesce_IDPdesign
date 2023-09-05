@@ -1,6 +1,16 @@
 import pandas as pd
 from localcider.sequenceParameters import SequenceParameters
 
+def fix_topology(t,seq):
+    cgtop = md.Topology()
+    cgchain = cgtop.add_chain()
+    for res in seq:
+        cgres = cgtop.add_residue(res, cgchain)
+        cgtop.add_atom('CA', element=md.element.carbon, residue=cgres)
+    traj = md.Trajectory(t.xyz, cgtop, t.time, t.unitcell_lengths, t.unitcell_angles)
+    traj = traj.superpose(traj, frame=0)
+    return traj
+
 def calc_scd_shd(aa_params,fasta,pH=7.4,model='M1',beta=-1):
     # set histidine charge based on pH
     aa_params.loc['H','q'] = 1. / ( 1 + 10**(pH-6) )
