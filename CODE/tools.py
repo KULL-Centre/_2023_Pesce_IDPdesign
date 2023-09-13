@@ -54,8 +54,3 @@ def rg(t, seq):
     masses = residues.loc[seq,'MW'].values
     rgarray = md.compute_rg(t,masses=masses)
     return rgarray
-
-def rh_kirk(conf):
-    n=len(list(conf.top.residues))
-    invrij = (1-1/n)*(1/md.compute_distances(conf,conf.top.select_pairs('all','all'))).mean(axis=1)
-    return 1/invrij
