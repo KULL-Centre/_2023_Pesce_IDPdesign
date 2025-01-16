@@ -3,7 +3,8 @@
 # Design of intrinsically disordered protein variants with diverse structural properties
 Supporting data and code for:
 
-*Pesce, F., Bremer, A., Tesei, G., Hopkins, J. B., Grace, C. R., Mittag, T., & Lindorff-Larsen, K. (2023). Design of intrinsically disordered protein variants with diverse structural properties. bioRxiv.*
+*Pesce, F., Bremer, A., Tesei, G., Hopkins, J. B., Grace, C. R., Mittag, T., & Lindorff-Larsen, K. (2024). Design of intrinsically disordered protein variants with diverse structural properties. Science Advances, 10(35), eadm9926.*
+https://doi.org/10.1126/sciadv.adm9926
 
 Molecular dynamics simulations are available on [ERDA](https://erda.ku.dk/archives/2bef5e8ad566d5204dd34ec6a316896b/published-archive.html).
 
